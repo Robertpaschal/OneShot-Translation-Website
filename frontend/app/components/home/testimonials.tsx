@@ -33,7 +33,7 @@ const TestimonialCarousel = () => {
     useEffect(() => {
         const newIntervalId = setInterval(() => {
             setActiveIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
-        }, 5000); // 5-second duration
+        }, 5000);
         setIntervalId(newIntervalId);
         return () => clearInterval(newIntervalId);
     }, []);
