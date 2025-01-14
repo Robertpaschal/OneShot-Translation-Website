@@ -13,7 +13,7 @@ export default function Layout({ children }: LayoutProps) {
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </head>
-      <body className="bg-gray-100">
+      <body className="bg-white-100">
         <div className="flex flex-col min-h-screen">
           <main className="flex-grow">{children}</main>
           <Footer />

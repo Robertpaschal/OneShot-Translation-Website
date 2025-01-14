@@ -109,7 +109,7 @@ const Footer: React.FC = () => {
             </div>
             <button
               onClick={handleSubscription}
-              className="px-4 py-2 bg-[#5ccce4] text-[#13536c] text-sm md:text-lg font-semibold font-['DM Sans'] rounded-md transition duration-300 transform active:scale-95 hover:bg-[#1a8fa1] focus:ring-2 focus:ring-offset-2 focus:ring-[#5ccce4] border-2 border-[#5ccce4]"
+              className="px-4 py-2 bg-[#5ccce4] text-[#13536c] text-sm md:text-lg font-bold font-['DM Sans'] rounded-md transition duration-300 transform active:scale-95 hover:bg-[#1a8fa1] focus:ring-2 focus:ring-offset-2 focus:ring-[#5ccce4] border-2 border-[#5ccce4]"
             >
               Subscribe to news
             </button>
