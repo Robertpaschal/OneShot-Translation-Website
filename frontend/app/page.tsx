@@ -2,6 +2,14 @@ import Head from "next/head";
 import ContactUs from "./components/home/contactUs";
 import TestimonialCarousel from "./components/home/testimonials"; 
 import Teams from "./components/home/team";
+import WorkingProcess from "./components/home/workingProcess";
+import CaseStudies from "./components/home/caseStudies";
+
+const Section = ({ children }: { children: React.ReactNode }) => (
+    <div className="w-full px-8">
+        {children}
+    </div>
+);
 
 export default function HomePage() {
     return (
@@ -14,16 +22,26 @@ export default function HomePage() {
                 <div className="flex flex-col justify-center items-center min-h-screen">
                     {/* Other home page content */}
                     <h1 className="text-3xl font-bold mb-8">Welcome to OneShot Translation</h1>
+
+                    {/* Case Studies Section */}
+                    <Section>
+                        <CaseStudies />
+                    </Section>
+
+                    {/* Working Process Section */}
+                    <Section>
+                        <WorkingProcess />
+                    </Section>
                     
                     {/* Teams Section */}
-                    <div>
-                    <Teams />
-                    </div>
+                    <Section>
+                        <Teams />
+                    </Section>
 
                     {/* Testimonial Carousel Section */}
-                    <div className="w-full px-8">
+                    <Section>
                         <TestimonialCarousel />
-                    </div>
+                    </Section>
                 </div>
 
                 {/* Contact Us Section */}

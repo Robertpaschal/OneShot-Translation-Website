@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from "react";
+import Image from 'next/image';
 
 // TeamMemberCard: Component for individual team member cards
 interface TeamMemberCardProps {
@@ -13,11 +14,11 @@ interface TeamMemberCardProps {
 
 const TeamMemberCard: React.FC<TeamMemberCardProps> = ({ name, role, description, image, linkedin }) => {
     return (
-        <div className="w-full md:w-[387px] p-10 bg-white rounded-[45px] shadow-md shadow-[0px_4px_4px_0px_rgba(0,0,0,0.30)] shadow-[0px_8px_12px_6px_rgba(0,0,0,0.12)] border-b-4 border-[#13536c] border-r border-l border-t flex flex-col gap-4 overflow-hidden">
+        <div className="w-full md:w-[387px] p-10 bg-white rounded-[45px] shadow-md shadow-[0px_4px_4px_0px_rgba(0,0,0,0.30)] shadow-[0px_8px_12px_6px_rgba(0,0,0,0.3)] border-b-4 border-[#13536c] border-r border-l border-t flex flex-col gap-4 overflow-hidden">
             {/* Profile section */}
             <div className="flex items-center gap-5">
                 <div className="relative w-[105px] h-[105px]">
-                    <img src={image} alt={`${name}'s profile`} className="absolute w-full h-full rounded-full object-cover" />
+                    <Image src={image} alt={`${name}'s profile`} className="rounded-full object-cover" fill />
                 </div>
                 <div>
                     <h3 className="text-xl font-bold text-[#13536c]">{name}</h3>
@@ -38,7 +39,7 @@ const TeamMemberCard: React.FC<TeamMemberCardProps> = ({ name, role, description
 // HeaderSection: Component for the header section
 const HeaderSection = () => (
     <div className="flex flex-col items-center md:flex-row md:items-start gap-8 px-6 py-7 md:px-12 md:py-12 md:ml-20 mt-0 mb-0">
-        <div className="text-center md:text-left w-full md:w-auto">
+        <div className="text-center md:text-left w-full md:w-auto" >
             <div className="px-3 py-1 bg-[#bad3da] rounded-lg inline-block">
                 <h1 className="text-[40px] font-bold text-[#13536c] font-dm-sans">Team</h1>
             </div>
@@ -163,9 +164,11 @@ const Teams = () => {
     ];
 
     return (
-        <div className="w-full max-w-[1440px] mx-auto">
+        <div className="w-full max-w-[1440px] mx-auto mb-0">
             <HeaderSection />
-            <TeamMembersSection teamMembers={teamMembers} showAll={showAll} onToggleShowAll={() => setShowAll(!showAll)} />
+            <div className="mt-0">
+                <TeamMembersSection teamMembers={teamMembers} showAll={showAll} onToggleShowAll={() => setShowAll(!showAll)} />
+            </div>
         </div>
     );
 };
