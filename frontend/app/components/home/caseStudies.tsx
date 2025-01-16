@@ -38,7 +38,7 @@ interface CaseStudiesCardProps {
 const CaseStudiesCard: React.FC<CaseStudiesCardProps> = ({ description }) => (
     <div className="flex flex-col justify-between text-left px-4 py-2 w-full h-full">
         <div
-            className="text-[#bad3da] text-sm md:text-base font-semibold font-['DM Sans'] overflow-hidden break-words"
+            className="text-[#bad3da] text-m lg:text-lg md:text-base font-semibold font-['DM Sans'] overflow-hidden break-words"
             style={{
                 wordWrap: 'break-word',
                 overflowWrap: 'break-word',
@@ -122,7 +122,7 @@ const CaseStudies = () => {
                 style={{
                     boxShadow:
                         "0px 4px 4px rgba(0, 0, 0, 0.3), 0px 8px 12px 6px rgba(0, 0, 0, 0.3)",
-                    height: '350px',
+                    height: '380px',
                     maxWidth: '1280px',    
                 }}
             >
@@ -132,7 +132,7 @@ const CaseStudies = () => {
                         className="flex-shrink-0 item-center w-[250px] md:w-[360px] bg-[#1d677e] p-4 rounded-[45px] flex flex-col justify-between"
                         style={{ 
                             height: 'auto', 
-                            minHeight: '250px',  
+                            minHeight: '280px',  
                             boxShadow:
                                 "0px 4px 4px rgba(0, 0, 0, 0.3), 0px 8px 12px 6px rgba(0, 0, 0, 0.15)", 
                             }}
