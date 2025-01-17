@@ -129,7 +129,7 @@ const Services = () => {
     return (
         <div className="w-full min-h-screen font-['DM Sans'] flex flex-col items-center justify-center mb-20 max-w-screen-xl mx-auto lg:max-w-[1440px]">
             {/* Header */}
-            <div className="lex flex-col md:flex-row justify-start items-center gap-7 w-full max-w-6xl mx-auto px-4 md:px-0 mb-10 ml-23">
+            <div className="flex flex-col md:flex-row justify-start items-center gap-7 w-full max-w-6xl mx-auto px-4 md:px-0 mb-10 ml-23">
                 <div className="flex flex-col px-[8px] py-[8px] bg-[#bad3da] rounded-[7px] flex-col justify-start items-start gap-3 flex">
                     <h1 className="text-4xl text-[#13536c] font-bold text-center md:text-left">Services</h1>
                 </div>
