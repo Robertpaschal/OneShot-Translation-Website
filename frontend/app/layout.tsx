@@ -1,4 +1,5 @@
 import React from 'react';
+import NavBar from './components/NavBar';
 import Footer from './components/Footer';
 import './globals.css';
 
@@ -15,6 +16,7 @@ export default function Layout({ children }: LayoutProps) {
       </head>
       <body className="bg-white-100">
         <div className="flex flex-col min-h-screen">
+          <NavBar />
           <main className="flex-grow">{children}</main>
           <Footer />
         </div>

@@ -1,0 +1,297 @@
+/* Header Section */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  overflow: hidden;
+  position: sticky;
+  background-color: transparent;
+  top: 0;
+  left: 0;
+  right: 0;
+  max-width: 1490px;
+  height: auto;
+  padding: 0px 120px;
+  flex-wrap: nowrap;
+  box-sizing: border-box;
+  z-index: 10;
+  transition: top 0.3s ease, background-color 0.3s ease;
+}
+
+.stuck {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+/* Hide navigation when scrolling down */
+.hideNav {
+  transform: translateY(-100%);
+  transition: transform 0.3s ease-out;
+}
+
+/* Logo Styles */
+.logo {
+  width: 150px;
+  height: auto;
+  flex-shrink: 0;
+  object-fit: cover;
+  position: absolute;
+  display: block;
+  left: 7.5%;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+
+/* Navigation */
+.nav {
+  display: flex;
+  gap: 40px;
+  flex-wrap: nowrap;
+  flex-grow: 1;
+  justify-content: flex-end;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+/* Navigation Item */
+.navItem {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  color: #1da5cb;
+  cursor: pointer;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-transform: capitalize;
+  text-shadow: 0px 0px 2px rgba(0.1, 0.1, 0.1, 0.3);
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.navItem:hover {
+  color: #13536c;
+  transform: scale(1.05);
+  text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+}
+
+.navItem:active {
+  color: #10384b;
+  transform: scale(0.95);
+}
+
+/* Dynamic divider for active nav item */
+.activeDivider {
+  height: 4px;
+  background-color: #13536c;
+  border-radius: 4px;
+  margin-top: 5px;
+  width: 100%;
+}
+
+.menuToggle {
+  display: none;
+}
+
+/* Quote Button */
+.quoteButton {
+  background-color: #13536c;
+  padding: 10px 15px;
+  border-radius: 34px;
+  color: #1da5cb;
+  font-weight: bold;
+  font-size: 18px;
+  cursor: pointer;
+  margin-top: 0px;
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 2px 3px 5px rgba(0.2, 0.2, 0.2, 0.3), 0px 3px 3px 3px rgba(0.2, 0.2, 0, 0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.quoteButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3), 0px 4px 4px 4px rgba(0, 0, 0, 0.3);
+}
+
+.quoteButton:active {
+  transform: translateY(2px);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3), 0px 1px 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Adjustments for NavBar */
+@media (max-width: 1024px) {
+  .header {
+    gap: 10%;
+    padding: 30px 25px;
+    height: 100%;
+  }
+
+  .logo {
+    width: auto;
+    margin-top: auto;
+    max-width: 110px;
+    height: fit-content;
+    min-height: 37px;
+    flex-shrink: 0;
+    object-fit: cover;
+    left: 15px;
+    top: 50%;
+    position: absolute;
+    z-index: 11;
+    cursor: pointer;
+  }
+
+  .logoWrapper {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logoLink {
+    display: block;
+    width: fit-content;
+    cursor: pointer;
+    z-index: 1100;
+  }
+
+  /* Mobile Navigation Button */
+  .menuToggle {
+    display: block ;
+    position: absolute;
+    top: 25px;
+    right: 15px;
+    z-index: 1100;
+    font-size: 25px;
+    color: #1da5cb;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transform: translateY(-50%);
+  }
+
+  .menuToggle svg {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    stroke-width: 4;
+  }
+  
+  .menuToggle:hover svg {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+
+  .navContainer {
+    position: fixed;
+    top: 7.82%;
+    left: 0;
+    right: 0; 
+    width: 100%;
+    margin: auto;
+    background-color: rgba(255, 255, 255, 0.8);
+    height: auto;
+    border-radius: 0 0 30px 30px;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    display: flex;
+    gap: 20px;
+    padding: 0 0 36px 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow-y: auto;
+  }
+
+  .navContainer.visible {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  .navContainer.hidden {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  .nav {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 20px;
+   width: 100%;
+  }
+
+  .navItem {
+    margin: 10px 0;
+    font-size: 1rem;
+    color: #1da5cb;
+    font-weight: bold;
+    padding: 10px 0;
+    text-align: center;
+    transition: color 0.3s ease;
+  }
+
+  .quoteButton {
+    font-size: 16px;
+    padding: 10px 15px;
+    width: auto;
+    max-width: auto;
+    text-align: center;
+  }
+}
+
+@media (max-width: 745px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .logoWrapper {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logoLink {
+    display: block;
+    width: fit-content;
+    cursor: pointer;
+  }
+  
+  .navContainer {
+    position: fixed;
+    top: 7.8%;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: auto;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+    transform: translateY(-100%); 
+    transition: transform 0.3s ease-in-out opacity 0.3s ease-in-out;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 0 35px 0;
+    overflow-y: auto;
+  }
+
+  .navContainer.visible {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  .navContainer.hidden {
+    transform: translateY(-100%); 
+    opacity: 0;
+  }
+
+  .nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .quoteButton {
+    font-size: 0.9rem;
+    padding: 8px 10px;
+  }
+}

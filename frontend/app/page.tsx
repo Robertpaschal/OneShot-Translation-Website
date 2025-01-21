@@ -6,6 +6,7 @@ import WorkingProcess from "./components/home/workingProcess";
 import CaseStudies from "./components/home/caseStudies";
 import CTASection from "./components/home/CTA";
 import Services from "./components/home/services";
+import LandingPage from "./components/home/landingPage";
 
 const Section = ({ children }: { children: React.ReactNode }) => (
     <div className="w-full px-8">
@@ -20,10 +21,9 @@ export default function HomePage() {
                 <title>OneShot Translation Home Page</title>
             </Head>
             <div className="w-full min-h-screen bg-white border border-white">
-                {/* Main Content Section */}
                 <div className="flex flex-col justify-center items-center min-h-screen">
-                    {/* Other home page content */}
-                    <h1 className="text-3xl font-bold mb-8">Welcome to OneShot Translation</h1>
+                    {/* Landing Page */}
+                    <LandingPage />
 
                     {/* Services Section */}
                     <Section>
