@@ -2,19 +2,27 @@
 
 import React, { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
+
 import styles from '../../customStyles/landingPage.module.css';
 
 const companyLogos = [
-  "/svgs/HeroSection/Amazon-logo.svg",
-  "/svgs/HeroSection/Dribble-logo.svg",
-  "/svgs/HeroSection/HubSpot-logo.svg",
-  "/svgs/HeroSection/Notion-logo.svg",
-  "/svgs/HeroSection/Netflix-logo.svg",
-  "/svgs/HeroSection/Zoom-logo.svg",
+  '/svgs/HeroSection/Amazon-logo.svg',
+  '/svgs/HeroSection/Dribble-logo.svg',
+  '/svgs/HeroSection/HubSpot-logo.svg',
+  '/svgs/HeroSection/Notion-logo.svg',
+  '/svgs/HeroSection/Netflix-logo.svg',
+  '/svgs/HeroSection/Zoom-logo.svg',
 ];
 
 // Initially triple the logos to fill space
-const initialLogos = [...companyLogos, ...companyLogos, ...companyLogos, ...companyLogos, ...companyLogos, ...companyLogos];
+const initialLogos = [
+  ...companyLogos,
+  ...companyLogos,
+  ...companyLogos,
+  ...companyLogos,
+  ...companyLogos,
+  ...companyLogos,
+];
 
 const LandingPage: React.FC = () => {
   const carouselRef = useRef<HTMLDivElement>(null);
@@ -43,7 +51,7 @@ const LandingPage: React.FC = () => {
       const visibleLogos = Math.floor(container.clientWidth / logoWidth);
 
       if (visibleLogos >= 12 && logos.length < 12 * 6) {
-        setLogos((prevLogos) => [...prevLogos, ...companyLogos]);
+        setLogos(prevLogos => [...prevLogos, ...companyLogos]);
       }
     };
 
@@ -92,7 +100,9 @@ const LandingPage: React.FC = () => {
               the best of human expertise with cutting-edge AI technology.
             </p>
             <Link href="/book-consultation">
-              <button className={styles.consultationButton}>Book a Consultation</button>
+              <button className={styles.consultationButton}>
+                Book a Consultation
+              </button>
             </Link>
           </div>
         ) : (
@@ -104,7 +114,9 @@ const LandingPage: React.FC = () => {
               the best of human expertise with cutting-edge AI technology.
             </p>
             <Link href="/book-consultation">
-              <button className={styles.consultationButton}>Book a Consultation</button>
+              <button className={styles.consultationButton}>
+                Book a Consultation
+              </button>
             </Link>
           </div>
         )}
@@ -127,7 +139,7 @@ const LandingPage: React.FC = () => {
               <img
                 key={index}
                 src={logo}
-                alt={`Company ${index % companyLogos.length + 1}`}
+                alt={`Company ${(index % companyLogos.length) + 1}`}
                 className={styles.carouselLogo}
               />
             ))}

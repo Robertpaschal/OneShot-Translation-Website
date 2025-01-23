@@ -1,14 +1,14 @@
 /* Landing Page Container */
 .landingPage {
-    width: 100%; 
-    max-width: 1405px;
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    padding: 0 20px;
-    margin-bottom: 40px;
+  width: 100%;
+  max-width: 1405px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0 20px;
+  margin-bottom: 40px;
 }
 
 /* Hero Section */
@@ -53,18 +53,26 @@
   border-radius: 14px;
   cursor: pointer;
   text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
-  box-shadow: 2px 3px 5px rgba(0.2, 0.2, 0.2, 0.3), 0px 3px 3px 3px rgba(0.2, 0.2, 0, 0.3);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow:
+    2px 3px 5px rgba(0.2, 0.2, 0.2, 0.3),
+    0px 3px 3px 3px rgba(0.2, 0.2, 0, 0.3);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .consultationButton:hover {
-    transform: translateY(-2px);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3), 0px 4px 4px 4px rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px);
+  box-shadow:
+    0px 4px 4px rgba(0, 0, 0, 0.3),
+    0px 4px 4px 4px rgba(0, 0, 0, 0.3);
 }
 
 .consultationButton:active {
-    transform: translateY(2px);
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3), 0px 1px 1px 1px rgba(0, 0, 0, 0.3);
+  transform: translateY(2px);
+  box-shadow:
+    0px 1px 1px rgba(0, 0, 0, 0.3),
+    0px 1px 1px 1px rgba(0, 0, 0, 0.3);
 }
 
 .heroImage {
@@ -84,7 +92,6 @@
   max-width: 1405px;
   position: relative;
   overflow: hidden;
-
 }
 
 /* Carousel Section */
@@ -108,7 +115,6 @@
   animation-play-state: running;
   will-change: transform;
   flex-wrap: nowrap;
-
 }
 
 .carouselLogo {
@@ -133,7 +139,6 @@
     transform: translateX(-100%);
   }
 }
-
 
 /* Responsive Adjustments for Header and Hero */
 @media (max-width: 1024px) {
@@ -184,7 +189,7 @@
     gap: 20px;
   }
 
-  .carouselLogo{
+  .carouselLogo {
     height: auto;
     width: 100px;
   }
@@ -195,9 +200,8 @@
     gap: 15px;
   }
 
-  .carouselLogo{
+  .carouselLogo {
     width: 90px;
     height: auto;
   }
 }
-
