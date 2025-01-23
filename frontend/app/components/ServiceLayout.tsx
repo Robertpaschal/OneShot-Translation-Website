@@ -2,6 +2,7 @@
 
 import React from 'react';
 
+import UseCases from './services/static/UseCases';
 import OtherServices from './services/static/otherServices';
 import ServiceCTA from './services/dynamic/serviceCTA';
 
@@ -27,8 +28,13 @@ const ServiceLayout: React.FC<ServiceLayoutProps> = ({
       <main className="flex-grow">
         {children}
 
+        {/* Static Use Cases Section*/}
+        <div>
+            <UseCases />
+        </div>
+
         {/* Static Services Section */}
-        <div className="mt-20">
+        <div>
           <OtherServices />
         </div>
       </main>
