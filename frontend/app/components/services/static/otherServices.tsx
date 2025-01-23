@@ -1,14 +1,14 @@
 import React from 'react';
 
-import ServiceCard from '../services/dynamic/serviceCard';
-import ServiceHeader from './serviceSectionHeader';
+import ServiceCard from '../dynamic/servicePageCard';
+import OtherServicesHeader from './otherServicesHeader';
 import renderedServices from '@/resources/services/renderedServices';
 
-const Services = () => {
+const OtherServices = () => {
   return (
     <div className="w-full min-h-screen font-['DM Sans'] flex flex-col items-center justify-center mb-20 max-w-screen-xl mx-auto lg:max-w-[1440px]">
       {/* Header */}
-      <ServiceHeader />
+      <OtherServicesHeader />
 
       {/* Service Cards */}
       <div className="w-full max-w-screen-xl px-6 sm:px-10 lg:px-3 rounded-[45px] grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -29,4 +29,4 @@ const Services = () => {
   );
 };
 
-export default Services;
+export default OtherServices;

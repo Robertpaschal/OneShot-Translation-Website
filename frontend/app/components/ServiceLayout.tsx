@@ -2,6 +2,7 @@
 
 import React from 'react';
 
+import OtherServices from './services/static/otherServices';
 import ServiceCTA from './services/dynamic/serviceCTA';
 
 interface ServiceLayoutProps {
@@ -23,7 +24,14 @@ const ServiceLayout: React.FC<ServiceLayoutProps> = ({
   return (
     <div className="flex flex-col min-h-screen">
       {/* Main Content */}
-      <main className="flex-grow">{children}</main>
+      <main className="flex-grow">
+        {children}
+
+        {/* Static Services Section */}
+        <div className="mt-20">
+          <OtherServices />
+        </div>
+      </main>
 
       {/* Service CTA Section */}
       <ServiceCTA {...ctaProps} />
