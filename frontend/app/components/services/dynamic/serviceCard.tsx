@@ -1,3 +1,4 @@
+//for home page
 import React from 'react';
 
 interface ServiceCardProps {
