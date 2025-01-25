@@ -46,7 +46,7 @@ const StepCard: React.FC<StepCardProps> = ({ step }) => {
             {step.number}
           </div>
           <div
-            className="w-full md:w-auto text-xl md:text-3xl font-bold font-['DM Sans']"
+            className="w-full md:w-auto text-2xl md:text-3xl font-bold font-['DM Sans']"
             style={{ color: styles.textColor }}
           >
             {step.title}
@@ -73,7 +73,7 @@ const StepCard: React.FC<StepCardProps> = ({ step }) => {
             style={{ borderColor: styles.textColor }}
           ></div>
           <div
-            className="w-full text-sm md:text-lg font-medium font-['DM Sans']"
+            className="w-full text-m md:text-xl font-medium font-['DM Sans']"
             style={{ color: styles.textColor }}
           >
             {step.description}

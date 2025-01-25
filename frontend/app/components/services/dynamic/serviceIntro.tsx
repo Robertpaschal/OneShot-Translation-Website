@@ -17,7 +17,7 @@ const IntroComponent: React.FC<IntroProps> = ({
     <>
       {/* Large screens layout */}
       <div
-        className="hidden lg:flex items-start bg-[#f3f3f3] rounded-[45px] shadow-md p-12 gap-10 w-full max-w-[1290px] mx-auto"
+        className="hidden lg:flex items-start bg-[#f3f3f3] rounded-[45px] shadow-md p-12 gap-10 w-full max-w-[1280px] mx-auto"
         style={{
           boxShadow:
             '0px 4px 4px rgba(0, 0, 0, 0.3), 0px 8px 12px 6px rgba(0, 0, 0, 0.3)',

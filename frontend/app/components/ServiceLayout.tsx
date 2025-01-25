@@ -34,6 +34,7 @@ interface ServiceLayoutProps {
     title: string;
     description: string;
     buttonText: string;
+    splitIndex?: number;
   };
   serviceIntro: {
     image: string;
